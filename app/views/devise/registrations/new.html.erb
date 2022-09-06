@@ -1,0 +1,107 @@
+
+  
+  <div class="dd">
+
+    <h2>Sign up</h2>
+
+ </div>
+  <div class="row kk">
+    <div class="col-sm-2" style="background-color:AliceBlue;">
+  
+
+      <img src="https://ssingularity.co.in/static/media/logo.802543c0.png" class="img-thumbnail" alt="SSINGULARITY TECHNOLOGIES" width="125" height="125vh"> 
+      
+    
+ </div>
+
+   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: false }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+    
+
+
+  </div>
+<% end %>
+<%= render "devise/shared/links" %>
+
+
+<style>
+         .dd{
+
+    
+ display:flex;
+       
+}
+
+.col-sm-2
+{
+/* display:flex; */
+  justify-content: space-between;
+
+}</style>
+           <%# <style>
+    .kk {
+       /* border: 5px solid blue; */
+      margin-top: 10px;
+      margin-bottom: 600px;
+      margin-right: 550px;
+      margin-left: 450px;
+      background-color: AliceBlue;
+         text-align: center
+    }
+       .field {
+
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-right: 5px;
+      margin-left: 65px;
+      background-color: AliceBlue;
+         text-align: center
+    }
+
+   .actions {
+
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-right: 5px;
+      margin-left: 65px;
+      background-color: AliceBlue;
+      text-align: center
+    }
+
+
+.dd{
+
+     margin-left: 580px;
+            /* content:""; */
+    /* display:block; */
+    width: 6em;
+    max-width:70%;
+    border-bottom: 0.3em solid black;
+    /* margin: 2em auto 0; */
+}
+    </style> %>
+
+
+
+<%# <%= render "devise/shared/links" %>

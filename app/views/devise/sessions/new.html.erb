@@ -1,0 +1,153 @@
+<!--<h2>Log in</h2>
+
+  <div class="container">
+   <div class="container" style="background-color:#f1f1f1">
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: false }) do |f| %>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "current-password" %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit "Log in" %>
+  </div>
+<% end %>
+</div>
+
+<%= render "devise/shared/links" %>
+-->
+
+
+
+
+  
+  <div class="dd">
+    <h2>Log in</h2>
+  </div>  
+  <div class="row kk">
+    <div class="col-sm-2" style="background-color:AliceBlue;">
+  
+
+      <img src="https://ssingularity.co.in/static/media/logo.802543c0.png" class="img-thumbnail" alt="SSINGULARITY TECHNOLOGIES" width="125" height="125vh"> 
+      
+     <div class="container">
+   <div class="container" >
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: false }) do |f| %>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "current-password" %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit "Log in" %>
+  </div>
+<% end %>
+</div>
+ <div class="actions">
+<%= render "devise/shared/links" %>
+   </div>
+           
+
+           <style>
+           .dd{
+
+    
+ display:flex;
+   justify-content: space-between;
+
+       
+}
+
+.col-sm-2
+{
+/* display:flex; */
+  justify-content: space-between;
+
+}
+
+   .actions {
+display:flex;
+   }
+           </style>
+<%#            
+           <style>
+   .kk {
+       /* border: 5px solid blue; */
+      margin-top: 10px;
+      margin-bottom: 600px;
+      margin-right: 550px;
+      margin-left: 450px;
+      /* background-color: AliceBlue; */
+         text-align: center
+         display:flex;
+  justify-content: space-between;
+    }
+       .field {
+
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-right: 50px;
+      margin-left: 65px;
+      background-color: AliceBlue;
+         text-align: center
+ 
+    }
+
+   .actions {
+
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-right: 50px;
+      margin-left: 65px;
+      background-color: AliceBlue;
+      text-align: center
+    }
+
+
+.dd{
+
+     margin-left: 600px;
+            /* content:""; */
+    /* display:block; */
+    width: 6em;
+    max-width:70%;
+    border-bottom: 0.3em solid black;
+    /* margin: 2em auto 0; */
+       text-align: center
+       
+       
+}
+
+.col-sm-2
+{
+margin-left: 58px;
+}
+    </style>
+
+
+
+<%# <%= render "devise/shared/links" %>

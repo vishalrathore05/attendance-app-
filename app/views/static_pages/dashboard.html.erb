@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  display: flex;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 30%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #010b13; /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+
+.button {
+  border: none;
+"background-color: #f1f1f1;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+    /* color:green; */
+        font-weight: bold;
+      }
+
+      
+.submit {
+  border: none;
+   color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+ 
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  display:flex;
+
+
+}
+ 
+ 
+</style>
+</head>
+<body>
+
+
+
+<h2>GOOD DAYS WAITING  !!!</h2>
+
+<div class="row">
+  <div class="column 1" style="background-color: #010b13;">
+ 
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><B>Attendance!</B></button>
+
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>HTML CSS JavaScript Calender  hhh | Webdevtrick.com</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="main">
+  <div class="sideb">
+    <div class="header"><i class="fa fa-angle-left" aria-hidden="true"></i><span><span class="month"> </span><span class="year"></span></span><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+    <div class="calender">
+      <table>
+        <thead>
+          <tr class="weedays">
+            <th data-weekday="sun" data-column="0">Sun</th>
+            <th data-weekday="mon" data-column="1">Mon</th>
+            <th data-weekday="tue" data-column="2">Tue</th>
+            <th data-weekday="wed" data-column="3">Wed</th>
+            <th data-weekday="thu" data-column="4">Thu</th>
+            <th data-weekday="fri" data-column="5">Fri</th>
+            <th data-weekday="sat" data-column="6">Sat</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="days" data-row="0">
+            <td data-column="0"></td>
+            <td data-column="1"></td>
+            <td data-column="2"></td>
+            <td data-column="3"></td>
+            <td data-column="4"></td>
+            <td data-column="5"></td>
+            <td data-column="6"></td>
+          </tr>
+          <tr class="days" data-row="1">
+            <td data-column="0"></td>
+            <td data-column="1"></td>
+            <td data-column="2"></td>
+            <td data-column="3"></td>
+            <td data-column="4"></td>
+            <td data-column="5"></td>
+            <td data-column="6"></td>
+          </tr>
+          <tr class="days" data-row="2">
+            <td data-column="0"></td>
+            <td data-column="1"></td>
+            <td data-column="2"></td>
+            <td data-column="3"></td>
+            <td data-column="4"></td>
+            <td data-column="5"></td>
+            <td data-column="6"></td>
+          </tr>
+          <tr class="days" data-row="3">
+            <td data-column="0"></td>
+            <td data-column="1"></td>
+            <td data-column="2"></td>
+            <td data-column="3"></td>
+            <td data-column="4"></td>
+            <td data-column="5"></td>
+            <td data-column="6"></td>
+          </tr>
+          <tr class="days" data-row="4">
+            <td data-column="0"></td>
+            <td data-column="1"></td>
+            <td data-column="2"></td>
+            <td data-column="3"></td>
+            <td data-column="4"></td>
+            <td data-column="5"></td>
+            <td data-column="6"></td>
+          </tr>
+          <tr class="days" data-row="5">
+            <td data-column="0"></td>
+            <td data-column="1"></td>
+            <td data-column="2"></td>
+            <td data-column="3"></td>
+            <td data-column="4"></td>
+            <td data-column="5"></td>
+            <td data-column="6"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="showDate"><i class="fa fa-angle-double-right" aria-hidden="true"></i></div>
+  </div>
+  <div class="right-wrapper">
+    <div class="header"><span></span></div><span class="day"></span><span class="month"></span>
+  </div>
+</div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script  src="function.js"></script>
+<script>
+/** code by webdevtrick ( https://webdevtrick.com ) **/
+var month = [
+ "January",
+ "February",
+ "March",
+ "April",
+ "May",
+ "June",
+ "July",
+ "August",
+ "September",
+ "October",
+ "November",
+ "December"
+];
+var weekday = [
+ "Sunday",
+ "Monday",
+ "Tuesday",
+ "Wednesday",
+ "Thursday",
+ "Friday",
+ "Saturday"
+];
+var weekdayShort = [
+ "sun",
+ "mon",
+ "tue",
+ "wed",
+ "thu",
+ "fri",
+ "sat"
+];
+var monthDirection = 0;
+ 
+function getNextMonth() {
+ monthDirection++;
+ var current;
+ var now = new Date();
+ if (now.getMonth() == 11) {
+ current = new Date(now.getFullYear() + monthDirection, 0, 1);
+ } else {
+ current = new Date(now.getFullYear(), now.getMonth() + monthDirection, 1);
+ }
+ initCalender(getMonth(current));
+}
+ 
+function getPrevMonth() {
+ monthDirection--;
+ var current;
+ var now = new Date();
+ if (now.getMonth() == 11) {
+ current = new Date(now.getFullYear() + monthDirection, 0, 1);
+ } else {
+ current = new Date(now.getFullYear(), now.getMonth() + monthDirection, 1);
+ }
+ initCalender(getMonth(current));
+}
+Date.prototype.isSameDateAs = function (pDate) {
+ return (
+ this.getFullYear() === pDate.getFullYear() &&
+ this.getMonth() === pDate.getMonth() &&
+ this.getDate() === pDate.getDate()
+ );
+};
+ 
+function getMonth(currentDay) {
+ var now = new Date();
+ var currentMonth = month[currentDay.getMonth()];
+ var monthArr = [];
+ for (i = 1 - currentDay.getDate(); i < 31; i++) {
+ var tomorrow = new Date(currentDay);
+ tomorrow.setDate(currentDay.getDate() + i);
+ if (currentMonth !== month[tomorrow.getMonth()]) {
+ break;
+ } else {
+ monthArr.push({
+ date: {
+ weekday: weekday[tomorrow.getDay()],
+ weekday_short: weekdayShort[tomorrow.getDay()],
+ day: tomorrow.getDate(),
+ month: month[tomorrow.getMonth()],
+ year: tomorrow.getFullYear(),
+ current_day: now.isSameDateAs(tomorrow) ? true : false,
+ date_info: tomorrow
+ }
+ });
+ }
+ }
+ return monthArr;
+}
+ 
+function clearCalender() {
+ $("table tbody tr").each(function () {
+ $(this).find("td").removeClass("active selectable currentDay between hover").html("");
+ });
+ $("td").each(function () {
+ $(this).unbind('mouseenter').unbind('mouseleave');
+ });
+ $("td").each(function () {
+ $(this).unbind('click');
+ });
+ clickCounter = 0;
+}
+ 
+function initCalender(monthData) {
+ var row = 0;
+ var classToAdd = "";
+ var currentDay = "";
+ var today = new Date();
+ 
+ clearCalender();
+ $.each(monthData,
+ function (i, value) {
+ var weekday = value.date.weekday_short;
+ var day = value.date.day;
+ var column = 0;
+ var index = i + 1;
+ 
+ $(".sideb .header .month").html(value.date.month);
+ $(".sideb .header .year").html(value.date.year);
+ if (value.date.current_day) {
+ currentDay = "currentDay";
+        classToAdd = "selectable";
+ $(".right-wrapper .header span").html(value.date.weekday);
+ $(".right-wrapper .day").html(value.date.day);
+ $(".right-wrapper .month").html(value.date.month);
+ }
+ if (today.getTime() < value.date.date_info.getTime()) {
+ classToAdd = "selectable";
+ 
+ }
+ $("tr.weedays th").each(function () {
+ var row = $(this);
+ if (row.data("weekday") === weekday) {
+ column = row.data("column");
+ return;
+ }
+ });
+ $($($($("tr.days").get(row)).find("td").get(column)).addClass(classToAdd + " " + currentDay).html(day));
+ currentDay = "";
+ if (column == 6) {
+ row++;
+ }
+ });
+ $("td.selectable").click(function () {
+ dateClickHandler($(this));
+ });
+}
+initCalender(getMonth(new Date()));
+ 
+var clickCounter = 0;
+$(".fa-angle-double-right").click(function () {
+ $(".right-wrapper").toggleClass("is-active");
+ $(this).toggleClass("is-active");
+});
+ 
+function dateClickHandler(elem) {
+ 
+ var day1 = parseInt($(elem).html());
+ if (clickCounter === 0) {
+ $("td.selectable").each(function () {
+ $(this).removeClass("active between hover");
+ });
+ }
+ clickCounter++;
+ if (clickCounter === 2) {
+ $("td.selectable").each(function () {
+ $(this).unbind('mouseenter').unbind('mouseleave');
+ });
+ clickCounter = 0;
+ return;
+ }
+ $(elem).toggleClass("active");
+ $("td.selectable").hover(function () {
+ 
+ var day2 = parseInt($(this).html());
+ $(this).addClass("hover");
+ $("td.selectable").each(function () {
+ $(this).removeClass("between");
+ 
+ });
+ if (day1 > day2 + 1) {
+ $("td.selectable").each(function () {
+ var dayBetween = parseInt($(this).html());
+ if (dayBetween > day2 && dayBetween < day1) {
+ $(this).addClass("between");
+ }
+ });
+ } else if (day1 < day2 + 1) {
+ $("td.selectable").each(function () {
+ var dayBetween = parseInt($(this).html());
+ if (dayBetween > day1 && dayBetween < day2) {
+ $(this).addClass("between");
+ }
+ });
+ }
+ }, function () {
+ $(this).removeClass("hover");
+ });
+}
+$(".fa-angle-left").click(function () {
+ getPrevMonth();
+ $(".main").addClass("is-rotated-left");
+ setTimeout(function () {
+ $(".main").removeClass("is-rotated-left");
+ }, 195);
+});
+ 
+$(".fa-angle-right").click(function () {
+ getNextMonth();
+ $(".main").addClass("is-rotated-right");
+ setTimeout(function () {
+ $(".main").removeClass("is-rotated-right");
+ }, 195);
+});
+</script>
+
+<style>
+/** code by webdevtrick ( https://webdevtrick.com ) **/
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: #B8F0FF;
+  overflow: hidden;
+  position: relative;
+  display:flex
+  outline: none;
+  perspective: 1000px;
+}
+ 
+.main {
+  /* position: absolute; */
+  /* width: 730px;
+  height: 420px; */
+  top: 50%;
+  left: 50%;
+  display: flex;
+ 
+  /* box-sizing: border-box; */
+  /* transform: translate(-50%, -50%); */
+  transition: all 0.195s ease;
+  transform-style: preserve-3d;
+}
+.main.is-rotated-left {
+  transform: translate(-50%, -50%) rotateY(-4deg);
+}
+.main.is-rotated-right {
+  transform: translate(-50%, -50%) rotateY(4deg);
+}
+.main .sideb,
+.main .right-wrapper {
+  background-color: white;
+  width: 50%;
+  float: left;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.main .header {
+  padding: 15px 0 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.main .header i {
+  padding: 0 5px;
+  cursor: pointer;
+}
+.main .header span {
+  display: inline-block;
+  margin: 0 3px;
+  font-weight: 700;
+}
+.main .right-wrapper {
+  background-color: #f05855;
+  color: white;
+  transform-origin: left center;
+  transform: rotateY(110deg);
+  transition: all 0.5s;
+}
+.main .right-wrapper.is-active {
+  transform: rotateY(0deg);
+}
+.main .right-wrapper .header {
+  text-align: left;
+  justify-content: center;
+}
+.main .right-wrapper .day {
+  font-size: 12em;
+  text-indent: -12px;
+  display: block;
+}
+.main .right-wrapper .month {
+  font-size: 2.5em;
+}
+.main .sideb .showDate {
+  color: white;
+  text-align: right;
+  width: 100%;
+}
+.main .sideb .showDate i {
+  cursor: pointer;
+  background: #f05855;
+  border-radius: 4px;
+  padding: 8px 12px;
+  transform: scale(1);
+  transition: all 0.3s;
+}
+.main .sideb .showDate i.is-active {
+  transform: scale(-1);
+}
+.main .sideb table {
+  text-align: center;
+ 
+  width: 90%;
+  margin: 30px auto 0;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+.main .sideb table tbody:before {
+  content: "-";
+  display: block;
+  line-height: 0.75em;
+  color: transparent;
+}
+.main .sideb table th {
+  color: #f05855;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.main .sideb table td {
+  padding: 11px 5px;
+  color: #ced0ce;
+  font-size: 0.75em;
+  transition: all 0.3s;
+  position: relative;
+}
+.main .sideb table td::before {
+  content: "";
+  display: none;
+  width: 50%;
+  height: 2px;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -8px);
+  background-color: #f05855;
+}
+.main .sideb table td.currentDay::before {
+  display: block;
+}
+.main .sideb table td.selectable {
+  color: #303633;
+  cursor: pointer;
+}
+.main .sideb table td.selectable:hover {
+  background: #f05855;
+  color: white;
+}
+.main .sideb table td.between {
+  background-color: #333;
+  color: white;
+}
+.main .sideb table td.active, .main .sideb table td.hover {
+  background: #f05855;
+  color: white;
+}
+
+</style>
+ 
+
+ 
+<div id="id01" class="modal">
+  
+  <%= form_with url: "/submit_attendance", method: :post, class: 'modal-content animate' do |form| %>
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="https://png.pngtree.com/png-vector/20190629/ourlarge/pngtree-business-people-avatar-icon-user-profile-free-vector-png-image_1527664.jpg" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <%= hidden_field_tag :is_present, true %>
+      <button type="button" class="button button present-btn" onclick="setPresent();">Present</button>
+      <br>
+      <button type="button" class="button button1 absent-btn" onclick="setAbsent();">Absent</button>
+      Reason:<br> <input type="text" name="reason">
+      <br>
+
+      <br>
+      <br>
+      <%= form.submit "Submit", class: "button button1" %>
+    </div> 
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+ 
+    </div>
+  <% end %>
+  
+</div>
+ 
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+  function setPresent() {
+    document.getElementById('is_present').value = true;
+  }
+
+  function setAbsent() {
+    document.getElementById('is_present').value = false;
+  }
+</script>
+  <a class="fcc-btn" href="stand_up_page">freeCodeCamp</a>  
+
+ </body>
+</html>
